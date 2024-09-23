@@ -1,15 +1,31 @@
 import { arrowRight } from "../assets/icons"
 import { offer } from "../assets/images"
 import Button from "../components/Button"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 
 const SpecialOffers = () => {
+    useGSAP(() => {
+        gsap.from('.right-animation', {
+            x: '70%',
+            opacity: 0,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: '.right-animation',
+            }
+        });
+
+    }, [])
+
+
+
     return (
         <section className="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
             <div className="flex-1">
                 <img src={offer} alt="" width={773} height={687} className="object-contain w0full" />
             </div>
 
-            <div className="flex flex-1 flex-col">
+            <div className="flex flex-1 flex-col right-animation">
                 <h2 className="font-palanquin text-4xl capitalize font-bold max-w-lg">
                     <span className="text-coral-red ">
                         Special

@@ -1,6 +1,7 @@
 import { CustomerReviews, Footer, Hero, Nav, PopularProducts, Services, SpecialOffers, Subscribe, SuperQuality } from "./sections"
 
 
+
 const App = () => (
   <main className="relative">
     <Nav />
